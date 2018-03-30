@@ -31,3 +31,6 @@ Switches are used to enalble/disable output to control the circuit.
 ### Resistors & Capacitors
 Resistors are used to resist electricity. The purpose of its use is to limit flow, therefore, the LED's will not burn out. Also, the resistors are measured in Ohms. Meanwhile, the capacitors' function is to store and discharge electrical charges. There are two types of capacitors: the ceramic type & the electrolytic capacitors. For the purpose of this project experiemnt, a capacitor will only be used when building the Timing Signal Generator.
 
+### LED's
+The LED is used throughout the project to project final data and help debug any problems one may face. The brightness of the diode is relative to the amount of current. Therefore, a resistor must be wired in order to ensure the LED does not burn out.
+
