@@ -76,6 +76,25 @@ A | B | F |
 1 | 0 | `0` |
 1 | 1 | `1` |
 
+Here are the pin's of the AND gate.
+
+![AND Pin](https://i.gyazo.com/6ead1c80c6eb1933a4e1fbfe83d9986f.png)
+
+### The 7432 Integrated Circuit
+Referred as the OR-gate, this function's output equals a logic `1` if one of the two inputs are logic 1's. Therefore, each OR-gate contains 2 inputs and 1 output. In other words, it can be written as `F = A+B`. Here is a look at the 7432 truth table & pin out diagram.
+
+![OR](https://i.gyazo.com/6650d55c7f7db3811060f96d8ef5c421.png)
+
+A | B | F |
+:-:|:-:|:-:|
+0 | 0 | `0` |
+0 | 1 | `1` |
+1 | 0 | `1` |
+1 | 1 | `1` |
+
+Here are the pin's of the AND gate.
+
+![OR Pin](https://i.gyazo.com/55d6f9d2fddf086de4eb43409d3075dc.png)
 
 
 
