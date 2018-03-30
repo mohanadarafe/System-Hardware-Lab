@@ -96,5 +96,5 @@ Here are the pin's of the AND gate.
 
 ![OR Pin](https://i.gyazo.com/55d6f9d2fddf086de4eb43409d3075dc.png)
 
-
+## The Timing Signal Generator
 
