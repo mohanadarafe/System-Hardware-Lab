@@ -43,3 +43,7 @@ Referred as the NOT-gate, this function's output invert's the input. In other wo
 
 
 ![NOT Truth Table](http://www.ccgscomputerscience.co.uk/students/courses/KS3/LEVEL2/datarep/html/images/notgate.png)
+
+![NOT Diagram](https://gyazo.com/c8c008d94646170816c8277681732e82)
+
+
