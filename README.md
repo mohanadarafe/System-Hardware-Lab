@@ -27,4 +27,4 @@ instructions such as moving data from one register to another and performing sim
 
 ### Switches
 Switches are used to enalble/disable output to control the circuit.
-![The switch](http://www.ashopbd.com/wp-content/uploads/2016/11/dip_switch_10ways_1024x1024.png)
+
