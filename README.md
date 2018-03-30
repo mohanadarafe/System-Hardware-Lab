@@ -26,5 +26,8 @@ instructions such as moving data from one register to another and performing sim
 ![The breadboard](https://education.ti.com/html/webhelp/EG_Innovator/EN/content/eg_innovsys/_images/m_breadboard/breadboard_front_ti_333x221.png)
 
 ### Switches
-Switches are used to enalble/disable output to control the circuit.
+Switches are used to enalble/disable output to control the circuit. 
+
+### Resistors & Capacitors
+Resistors are used to resist electricity. The purpose of its use is to limit flow, therefore, the LED's will not burn out. Also, the resistors are measured in Ohms. Meanwhile, the capacitors' function is to store and discharge electrical charges. There are two types of capacitors: the ceramic type & the electrolytic capacitors. For the purpose of this project experiemnt, a capacitor will only be used when building the Timing Signal Generator.
 
