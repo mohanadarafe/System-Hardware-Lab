@@ -42,7 +42,7 @@ Other laboratory tools used include wires, power supply box & wire cutters.
 Referred as the NOT-gate, this function's output invert's the input. In other words, `F = !X`. Here is a look at the 7404 truth table & pin-out diagram.
 
 
-![NOT Truth Table](http://www.ccgscomputerscience.co.uk/students/courses/KS3/LEVEL2/datarep/html/images/notgate.png)
+![NOT Truth Table](https://image.ibb.co/egUsh7/e9c7912c0465662e1f1c634ac13783a9.png)
 
 ![NOT Diagram](https://image.ibb.co/gFU8N7/NOT.png)
 
