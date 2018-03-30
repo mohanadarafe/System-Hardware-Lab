@@ -41,7 +41,7 @@ Other laboratory tools used include wires, power supply box & wire cutters.
 ### The 7404 Integrated Circuit
 Referred as the NOT-gate, this function's output invert's the input. In other words, `F = !X`. Here is a look at the 7404 truth table & pin-out diagram.
 
-![NOT Gate](https://i.gyazo.com/d3128d75968fb76459dc198450c81b87.png=250x250)
+![NOT Gate](https://i.gyazo.com/9bad38348da4ea4268e69a8eb076f0e8.png)
 
 X | F |
 :-:|:-:|
