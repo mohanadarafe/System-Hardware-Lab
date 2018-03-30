@@ -37,9 +37,21 @@ The LED is used throughout the project to project final data and help debug any 
 ### Lab tool's
 Other laboratory tools used include wires, power supply box & wire cutters.
 
+## Reading in Binary
+Base 10 | Binary | Base 10 | Binary |
+:-:|:-:|:-:|:-:|
+0 | `0000` | 8 | `1000` |
+1 | `0001` | 9 | `1001` |
+2 | `0010` | 10 | `1010` |
+3 | `0011` | 11 | `1011` |
+4 | `0100` | 12 | `1100` |
+5 | `0101` | 13 | `1101` |
+6 | `0110` | 14 | `1110` |
+7 | `0111` | 15 | `1111` |
+
 ## Basic Logic Function
 ### The 7404 Integrated Circuit
-Referred as the NOT-gate, this function's output invert's the input. In other words, `F = !X`. Here is a look at the 7404 truth table & pin-out diagram.
+Referred as the NOT-gate, this function's output invert's the input. In other words, it can be written as `F = !X`. Here is a look at the 7404 truth table & pin-out diagram.
 
 ![NOT Gate](https://i.gyazo.com/9bad38348da4ea4268e69a8eb076f0e8.png)
 
@@ -47,6 +59,22 @@ X | F |
 :-:|:-:|
 0 | `1` |
 1 | `0` |
+
+Here are the pins of the NOT gate.
+
+![NOT Circuit](https://i.gyazo.com/5559035b523ebf61a2731541c9fc3593.png)
+
+### The 7408 Integrated Circuit
+Referred as the AND-gate, this function's output equals a logic `1` if and only if the two inputs are logic 1's. Therefore, each AND-gate contains 2 inputs and 1 output. In other words, it can be written as `F = A.B`. Here is a look at the 7408 truth table & pin out diagram.
+
+![AND](https://i.gyazo.com/948c4b0cd4f0834188206a195506333a.png)
+
+A | B | F |
+:-:|:-:|:-:|
+0 | 0 | `0` |
+0 | 1 | `0` |
+1 | 0 | `0` |
+1 | 1 | `1` |
 
 
 
