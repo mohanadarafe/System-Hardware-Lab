@@ -113,5 +113,13 @@ The 555 Timer feeds the 74LS164SIPO Shift Register a clock, but, the inputs of t
 ### Assembling the Timing Signal Generator
 In order to assemble everthing nicely together, refer to the 555 timer to setup the `GND` & `VCC` properly. Also, your lab technician shall give you the proper resistor and capaciors needed. It is important to mention the task the pin 4 : RST. Its function is to reset the 555 timer which is done by having it at a logic `0`. Therefore, this pin will always be connected to `VCC`. Also, the pin 3 represents the output of the timing signal generator. Hence, a LED will be connected to it. Moving on to the shift register, the outputs of the register, namely QB, QD, QF and QG, will be conected to the 7420 NAND gate. As mentionned earlier, the output of the NAND gate will be fed back to the shift register. Finally, connect the CLK from the 555 timer to the shift register and demonstrate the final output in a LED.
 
+## The Bus, Arithmetic Unit and Program Counter
+
+### The Data Bus
+In order to efficiently spread data throughout the breadboard, the data can be spread in a bus. Namely, the bus is a set of wires that have multiple devices connected to it. With this in mind, the bus allows the data to be transfered to other columns in the breadboard. In this computer, a `4-bit` bus is used in order to spread data across the breadbaord named B0 to B3. In order to efficiently spread and control data, the first four pulses T0 to T3 are shared in the bus. Since data will be all over the place, the data registers have tristate outputs in order to avoid data interference. Hence, the output of the bus can be one of the following: logic `0`, logic`1` or `High-Z`. The high impedance insinuates that a device has no output. This is how the bus should look like on a breadboard.
+
+
+
+
 
 
