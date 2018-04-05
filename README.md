@@ -40,14 +40,14 @@ Other laboratory tools used include wires, power supply box & wire cutters.
 ## Reading in Binary
 Base 10 | Binary | Base 10 | Binary |
 :-:|:-:|:-:|:-:|
-0 | `0000` | 8 | `1000` |
-1 | `0001` | 9 | `1001` |
-2 | `0010` | 10 | `1010` |
-3 | `0011` | 11 | `1011` |
-4 | `0100` | 12 | `1100` |
-5 | `0101` | 13 | `1101` |
-6 | `0110` | 14 | `1110` |
-7 | `0111` | 15 | `1111` |
+0 | `0000` | 8 | `1000` 
+1 | `0001` | 9 | `1001` 
+2 | `0010` | 10 | `1010` 
+3 | `0011` | 11 | `1011` 
+4 | `0100` | 12 | `1100` 
+5 | `0101` | 13 | `1101` 
+6 | `0110` | 14 | `1110` 
+7 | `0111` | 15 | `1111` 
 
 ## Basic Logic Function
 ### The 7404 Integrated Circuit
@@ -56,9 +56,9 @@ Referred as the NOT-gate, this function's output invert's the input. In other wo
 ![NOT Gate](https://i.gyazo.com/9bad38348da4ea4268e69a8eb076f0e8.png)
 
 X | F |
-:-:|:-:|
-0 | `1` |
-1 | `0` |
+:-:|:-:
+0 | `1` 
+1 | `0` 
 
 Here are the pins of the NOT gate.
 
@@ -69,12 +69,12 @@ Referred as the AND-gate, this function's output equals a logic `1` if and only 
 
 ![AND](https://i.gyazo.com/948c4b0cd4f0834188206a195506333a.png)
 
-A | B | F |
-:-:|:-:|:-:|
-0 | 0 | `0` |
-0 | 1 | `0` |
-1 | 0 | `0` |
-1 | 1 | `1` |
+A | B | F 
+:-:|:-:|:-:
+0 | 0 | `0` 
+0 | 1 | `0` 
+1 | 0 | `0` 
+1 | 1 | `1` 
 
 Here are the pin's of the AND gate.
 
@@ -85,12 +85,12 @@ Referred as the OR-gate, this function's output equals a logic `1` if one of the
 
 ![OR](https://i.gyazo.com/6650d55c7f7db3811060f96d8ef5c421.png)
 
-A | B | F |
-:-:|:-:|:-:|
-0 | 0 | `0` |
-0 | 1 | `1` |
-1 | 0 | `1` |
-1 | 1 | `1` |
+A | B | F 
+:-:|:-:|:-:
+0 | 0 | `0` 
+0 | 1 | `1` 
+1 | 0 | `1` 
+1 | 1 | `1` 
 
 Here are the pin's of the AND gate.
 
