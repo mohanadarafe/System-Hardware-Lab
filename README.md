@@ -67,15 +67,7 @@ Here are the pins of the NOT gate.
 ### The 7408 Integrated Circuit
 Referred as the AND-gate, this function's output equals a logic `1` if and only if the two inputs are logic 1's. Therefore, each AND-gate contains 2 inputs and 1 output. In other words, it can be written as `F = A.B`. Here is a look at the 7408 truth table & pin out diagram.
 
-
-
-
-
-
-
-
-
-
+![AND](https://i.gyazo.com/948c4b0cd4f0834188206a195506333a.png)
 
 A | B | F
 :-:|:-:|:-:
