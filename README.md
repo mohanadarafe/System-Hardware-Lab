@@ -107,6 +107,8 @@ The 555 chip is the main component used to generate a timing signal generator. I
 ### The 74LS164SIPO Shift Register
 The 74LS164SIPO Shift Register is used with purpose to shift contents. In fact, the job of this shift register is mainly to take a single input and shift all the contents by 1 every clock cycle. Moreover, it has 8 outputs noted Qa to Qh.
 
+### Feedback from the Shift Register
+The 555 Timer feeds the 74LS164SIPO Shift Register a clock, but, the inputs of the shift register must be determined in order to receive feedback from the timing signal generator. Therefore, in order to produce feedback, it is necessary to use a new chip called the 7420 NAND Gate. Its function is just likes its name, it will have 4 inputs and its output will be fed back to the shift register. Here is how the NAND gate looks alike:
 
 
 
