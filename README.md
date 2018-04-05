@@ -56,7 +56,7 @@ Referred as the NOT-gate, this function's output invert's the input. In other wo
 ![NOT Gate](https://i.gyazo.com/9bad38348da4ea4268e69a8eb076f0e8.png)
 
 X | F
-:-:|:-:|
+:-:|:-:
 0 | `1`
 1 | `0`
 
