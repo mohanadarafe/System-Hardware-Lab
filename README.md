@@ -98,3 +98,12 @@ Here are the pin's of the AND gate.
 
 ## The Timing Signal Generator
 
+# Introduction
+The timing signal generator for the computer is a clock with a cycle that repeats. It allows the computer the amount of time needed to permorm operations. Moreover, the pace of the timing signal generator allows one to dictate how fast the computer processes.
+
+# The 555 Timer
+The 555 chip is the main component used to generate a timing signal generator. It is a much smaller chip as it only has 8 chips. Moreover, the 555 timer is used due to its astable mode. The astable mode provides a signal that constantly shifts between a logic `1` and logic `0`. Here is a look at the chip and its pin-out diagram.
+
+
+
+
