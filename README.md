@@ -110,7 +110,8 @@ The 74LS164SIPO Shift Register is used with purpose to shift contents. In fact, 
 ### Feedback from the Shift Register
 The 555 Timer feeds the 74LS164SIPO Shift Register a clock, but, the inputs of the shift register must be determined in order to receive feedback from the timing signal generator. Therefore, in order to produce feedback, it is necessary to use a new chip called the 7420 NAND Gate. Its function is just likes its name, it will have 4 inputs and its output will be fed back to the shift register. Here is how the NAND gate looks alike:
 
-
+### Assembling the Timing Signal Generator
+In order to assemble everthing nicely together, refer to the 555 timer to setup the `GND` & `VCC` properly. Also, your lab technician shall give you the proper resistor and capaciors needed. It is important to mention the task the pin 4 : RST. Its function is to reset the 555 timer which is done by having it at a logic `0`. Therefore, this pin will always be connected to `VCC`. Also, the pin 3 represents the output of the timing signal generator. Hence, a LED will be connected to it. Moving on to the shift register, the outputs of the register, namely QB, QD, QF and QG, will be conected to the 7420 NAND gate. As mentionned earlier, the output of the NAND gate will be fed back to the shift register. Finally, connect the CLK from the 555 timer to the shift register and demonstrate the final output in a LED.
 
 
 
