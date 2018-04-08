@@ -126,8 +126,16 @@ In order to assemble everthing nicely together, refer to the 555 timer to setup 
 ### The Data Bus
 In order to efficiently spread data throughout the breadboard, the data can be spread in a bus. Namely, the bus is a set of wires that have multiple devices connected to it. With this in mind, the bus allows the data to be transfered to other columns in the breadboard. In this computer, a `4-bit` bus is used in order to spread data across the breadbaord named B0 to B3. In order to efficiently spread and control data, the first four pulses T0 to T3 are shared in the bus. Since data will be all over the place, the data registers have tristate outputs in order to avoid data interference. Hence, the output of the bus can be one of the following: logic `0`, logic`1` or `High-Z`. The high impedance insinuates that a device has no output. This is how the bus should look like on a breadboard.
 
+![Bus](https://i.gyazo.com/e66e9075d62bfb58974507398342177c.png)
 
+### Program Counter & Shift Register
+The program counter of a computer holds the location of an execution to be executed. When a command executes, the Program Counter will increment by `+1` value by the data bus. This is done so the program counter can read the next instruction. In order to succefully increment the program counter, an arithmetic unit is used to do two jobs: add and shift. Primarily, a 4-bit adder (74LS283) will collect data from the data bus and increment its value by 1. In essence, PC = PC+1. Afterwards the output of the 74LS283 will proceed to a 4-bit shift register (74LS395) that will output the value back to the data bus. Have a look at the Adder & Register's pin-out diagram.
 
+![Adder](https://i.gyazo.com/45284d2554f70e0c4cb169db8c092bab.png)
+![Shift](https://i.gyazo.com/d71933199f802018a7910b8f51238109.png)
+
+### Assembling everything together
+The timing signal generator has four pulses, namely T0 to T3 used to control the two shift registers. Each have a specific function that ensure only one shift register is used at any given time. In depth, T0 is labelled as PCout, when active, the program counter can store data in the bus. T1 is labelled as SUMin, when active, the data is stored in the SUM register. T2 is labelled as SUMout, when active, the SUM register's data output is shifted to the data bus. Finally, T3 is labelled as PCin, when active, the program counter has a new incremented value. 
 
 
 
