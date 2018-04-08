@@ -104,14 +104,22 @@ The timing signal generator for the computer is a clock with a cycle that repeat
 ### The 555 Timer
 The 555 chip is the main component used to generate a timing signal generator. It is a much smaller chip as it only has 8 chips. Moreover, the 555 timer is used due to its astable mode. The astable mode provides a signal that constantly shifts between a logic `1` and logic `0`. Here is a look at the chip and its pin-out diagram.
 
+![555](https://i.gyazo.com/3063dc572aaa4130fe10cbf26a5e0828.png)
+
 ### The 74LS164SIPO Shift Register
 The 74LS164SIPO Shift Register is used with purpose to shift contents. In fact, the job of this shift register is mainly to take a single input and shift all the contents by 1 every clock cycle. Moreover, it has 8 outputs noted Qa to Qh.
+
+![74LS164SIPO](https://i.gyazo.com/d38c21f464b0e5afd6607fea2b0bc9f9.png)
 
 ### Feedback from the Shift Register
 The 555 Timer feeds the 74LS164SIPO Shift Register a clock, but, the inputs of the shift register must be determined in order to receive feedback from the timing signal generator. Therefore, in order to produce feedback, it is necessary to use a new chip called the 7420 NAND Gate. Its function is just likes its name, it will have 4 inputs and its output will be fed back to the shift register. Here is how the NAND gate looks alike:
 
+![Feedback](https://i.gyazo.com/0cd59f5379bff14faafaa528467aeef6.png)
+
 ### Assembling the Timing Signal Generator
 In order to assemble everthing nicely together, refer to the 555 timer to setup the `GND` & `VCC` properly. Also, your lab technician shall give you the proper resistor and capaciors needed. It is important to mention the task the pin 4 : RST. Its function is to reset the 555 timer which is done by having it at a logic `0`. Therefore, this pin will always be connected to `VCC`. Also, the pin 3 represents the output of the timing signal generator. Hence, a LED will be connected to it. Moving on to the shift register, the outputs of the register, namely QB, QD, QF and QG, will be conected to the 7420 NAND gate. As mentionned earlier, the output of the NAND gate will be fed back to the shift register. Finally, connect the CLK from the 555 timer to the shift register and demonstrate the final output in a LED.
+
+![Assembling](https://i.gyazo.com/63005e33b435dffd019c53bbead673c5.png)
 
 ## The Bus, Arithmetic Unit and Program Counter
 
