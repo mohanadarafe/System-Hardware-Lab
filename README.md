@@ -120,6 +120,7 @@ The 555 Timer feeds the 74LS164SIPO Shift Register a clock, but, the inputs of t
 In order to assemble everthing nicely together, refer to the 555 timer to setup the `GND` & `VCC` properly. Also, your lab technician shall give you the proper resistor and capaciors needed. It is important to mention the task the pin 4 : RST. Its function is to reset the 555 timer which is done by having it at a logic `0`. Therefore, this pin will always be connected to `VCC`. Also, the pin 3 represents the output of the timing signal generator. Hence, a LED will be connected to it. Moving on to the shift register, the outputs of the register, namely QB, QD, QF and QG, will be conected to the 7420 NAND gate. As mentionned earlier, the output of the NAND gate will be fed back to the shift register. Finally, connect the CLK from the 555 timer to the shift register and demonstrate the final output in a LED.
 
 ![Assembling](https://i.gyazo.com/63005e33b435dffd019c53bbead673c5.png)
+![Schematic](https://i.gyazo.com/ce6e1e0e15d34b58db1404764cf4b827.png)
 
 ## The Bus, Arithmetic Unit and Program Counter
 
