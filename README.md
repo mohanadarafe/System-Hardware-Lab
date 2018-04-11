@@ -138,5 +138,22 @@ The program counter of a computer holds the location of an execution to be execu
 ### Assembling everything together
 The timing signal generator has four pulses, namely T0 to T3 used to control the two shift registers. Each have a specific function that ensure only one shift register is used at any given time. In depth, T0 is labelled as PCout, when active, the program counter can store data in the bus. T1 is labelled as SUMin, when active, the data is stored in the SUM register. T2 is labelled as SUMout, when active, the SUM register's data output is shifted to the data bus. Finally, T3 is labelled as PCin, when active, the program counter has a new incremented value. 
 
+## Data Registers and the Memory Address Register
+
+### Data Registers
+Data registers' main purpose is to hold data in order to ease manipulation and flow of data. There are three 74LS173 `4-bit` registers used due to its tri-state outputs. In fact, when the register's OE is set to a logic `1`, the outputs are disconnected from the data bus setting it in high-impedance `Hi-Z`. When the register's OE is set to a logic `0`, the data is sent to the bus. The first two registers, namely register `A` and `B` are used as data registers. Meanwhile, the last register is used as a MAR. 
+
+### MAR
+The MAR is a Memory Address Register which provides the address of the RAM for instructions. Hence, the register obtains its data from the bus when the PC outputs its data. 
+
+### Setting up the data registers
+For now, the data register A and B's OE and CLOCK will be wired to groud. Furthermore, the CLOCK of the MAR will be wired to T1 from the Timing Signal Generator and its outputs will temporarly be connected to an LED for testing. The MAR's wiring will of course change but the use of LED helps keep track of data flow. The following is the pin-out diagram of the 74LS173
+
+![Register](https://i.gyazo.com/72013c791cda526da124e95fec75763a.png)
+
+
+
+
+
 
 
