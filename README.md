@@ -152,8 +152,12 @@ For now, the data register A and B's (OE) ̅  and CLK will be wired to ground. F
 ![Register](https://i.gyazo.com/72013c791cda526da124e95fec75763a.png)
 
 
+## Program Memory
 
+### ATTiny2313A
 
+### 7442Binary Coded Decimal to Decimal Decoder
 
+### Setting everything up together
 
 
