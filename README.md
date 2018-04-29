@@ -155,9 +155,62 @@ For now, the data register A and B's (OE) ̅  and CLK will be wired to ground. F
 ## Program Memory
 
 ### ATTiny2313A
+The ATTiny2313A is a chip that is in fact a general purpose microcontroller (MCU). It is essential for the memory. Because of the program load into it, the MCU can store bits. The microcontroller serves as a 16x4 bit ROM block. This means the data can only be read. The two main part of the memory inside this project reside in the number of cells and the size of data the MCU can holds.
+
+![7442](https://i.gyazo.com/44dc8ddedae064bc0de3e92fb53261ed.png)
 
 ### 7442Binary Coded Decimal to Decimal Decoder
+The 7442 binary coded decimal to decimal decoder is a 4 input, 10 output chip. It reads the instruction encoded inside the MCU.
+
+![7442](https://i.gyazo.com/6f533e384ebdcce717b96dbece4e9dc5.png)
+
+I3 | I2 | I1 | I0 | Y0| Y1| Y2| Y3| Y4| Y5| Y6| Y7| Y8| Y9
+:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+0 | 0 | 0| 0 | 0| 1| 1| 1| 1| 1| 1| 1| 1| 1
+0 | 0 | 0| 1 | 1| 0| 1| 1| 1| 1| 1| 1| 1| 1
+0 | 0 | 1| 0 | 1| 1| 0| 1| 1| 1| 1| 1| 1| 1
+0 | 0 | 1| 1 | 1| 1| 1| 0| 1| 1| 1| 1| 1| 1
+0 | 1 | 0| 0 | 1| 1| 1| 1| 0| 1| 1| 1| 1| 1
+0 | 1 | 0| 1 | 1| 1| 1| 1| 1| 0| 1| 1| 1| 1
+0 | 1 | 1| 0 | 1| 1| 1| 1| 1| 1| 0| 1| 1| 1
+0 | 1 | 1| 1 | 1| 1| 1| 1| 1| 1| 1| 0| 1| 1
+1 | 0 | 0| 0 | 1| 1| 1| 1| 1| 1| 1| 1| 0| 1
+1 | 0 | 0| 1 | 1| 1| 1| 1| 1| 1| 1| 1| 1| 0
+1 | 0 | 1| 0 | 1| 1| 1| 1| 1| 1| 1| 1| 1| 1
+1 | 0 | 1| 1 | 1| 1| 1| 1| 1| 1| 1| 1| 1| 1
+1 | 1 | 0| 0 | 1| 1| 1| 1| 1| 1| 1| 1| 1| 1
+1 | 1 | 1| 0 | 1| 1| 1| 1| 1| 1| 1| 1| 1| 1
+1 | 1 | 1| 1 | 1| 1| 1| 1| 1| 1| 1| 1| 1| 1
 
 ### Setting everything up together
+The output of the MAR are connected to the MCU and the output of the microcontroller are then connected into the decoder. This is essential since the MCU needs the data provided by the MAR to read a cell. With everything connected, the computer is practically complete and the set of instruction can be seen.
+
+![Instructions](https://i.gyazo.com/a470aa59c9b2ee01dfba9dec8c68d158.png)
+
+The MCU and 7442 are connected to Vcc and ground. A special part is needed for the MCU reset pin as it must be wired with a 47k resistor. For the MCU, PD0 through PD3 are address pins, while PB0 through Pb3 are pins representing the data output. For the 7442, instructions signals Isig0 through Isig9 are the outputs. The final schematics for the project computer can then be done as well as the program listing. As usual, T0 represent PC out, T1 SUM in, T2 SUM out and T3 PC in. Qa represent T0, Qb T1, Qc T2, and Qd T3.
+
+![Computer](https://i.gyazo.com/923636a44475c0ee429822129dcc2253.png)
+
+Number of Instruction | Address | Instruction | Instruction Name
+:-:|:-:|:-:|:-:|
+0 | 0000 | 1111 | NOP
+1 | 0001 | 0111 | IncA
+2 | 0010 | 0111 | IncA
+3 | 0011 | 0111 | IncA
+4 | 0100 | 1101 | Mov AB
+5 | 0101 | 1011 | IncB
+6 | 0110 | 1011 | IncB
+7 | 0111 | 1111 | NOP
+8 | 1000 | 1110 | MovBA
+9 | 1001 | 1011 | IncB
+10 | 1010 (A) | 0111 | IncA
+11 | 1011 (B) | 1011 | IncB
+12 | 1100 (C) | 0111 | IncA
+13 | 1101 (D) | 1101 | MovAB
+14 | 1110 (E) | 1110 | MovBA
+15 | 1111 (F) | 0111 | IncA
+
+
+
 
 
