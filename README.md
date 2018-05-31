@@ -211,6 +211,24 @@ Number of Instruction | Address | Instruction | Instruction Name
 15 | 1111 (F) | 0111 | IncA
 
 
+## The Control Signal Generator
+### Instructions
+This represents the final step. With everything implement and with the help of the data registers, the sum register and the clock pulse T4 through T7, we can implement 5 new operations.
+### IncA instruction
+Data register A output a value into the bus. The sum register then increment this value and the new value incremented by one is saved.
+### IncB instruction
+Data register B output a value into the bus. The sum register then increment this value and the new value incremented by one is saved.
+### MovAB instruction
+Data register A output value into the bus. Data register B will then take the value outputted by data register A and save it.
+### MovBA instruction
+Data register B output value into the bus. Data register A will then take the value outputted by data register B and save it.
+### NOP instruction
+This instruction does nothing and only act as a “break” during operations.
+
+### Conclusion
+We can then implement the control signal generator with the help of a few and/or gates.
+![Formula](https://i.gyazo.com/fd9fb9ac1904a121eb46e21d9314a655.png)
 
 
-
+## References
+[1]. Department of Engineering and Computer Science, SOEN 228/298 Lab manual, Rick Fenster,2018.
